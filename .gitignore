@@ -1,5 +1,5 @@
 .idea/*
-./out/*
-./yaml-payload.jar
-./yaml-payload.yml
+out/*
+yaml-payload.jar
+yaml-payload.yml
 *.class
