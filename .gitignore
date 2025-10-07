@@ -2,3 +2,4 @@
 ./out/*
 ./yaml-payload.jar
 ./yaml-payload.yml
+*.class
