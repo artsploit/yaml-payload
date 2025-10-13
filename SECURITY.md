@@ -18,8 +18,8 @@ If you discover a security vulnerability in this repository (e.g., issues with t
 - Suggest a fix or improvement if applicable
 
 ### For Critical Security Issues
-- Use GitHub's [private security advisory](https://github.com/artsploit/yaml-payload/security/advisories/new) feature
-- Or contact the repository maintainer directly
+- Use GitHub's private security advisory feature (navigate to the Security tab → Advisories → New draft security advisory)
+- Or contact the repository maintainer directly via GitHub
 - Provide detailed information about the vulnerability
 - Allow time for the issue to be addressed before public disclosure
 
