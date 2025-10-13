@@ -10,11 +10,18 @@ This repository contains a proof-of-concept tool for generating SnakeYAML deseri
 
 ## Reporting Security Issues
 
-If you discover a security vulnerability in this repository (e.g., issues with the code itself, documentation errors, or security concerns), please report it by:
+If you discover a security vulnerability in this repository (e.g., issues with the code itself, documentation errors, or security concerns), please report it responsibly:
 
-1. Opening an issue in this repository
-2. Clearly describing the security concern
-3. If applicable, suggesting a fix or improvement
+### For Non-Critical Issues
+- Open a public issue in this repository
+- Clearly describe the concern
+- Suggest a fix or improvement if applicable
+
+### For Critical Security Issues
+- Use GitHub's [private security advisory](https://github.com/artsploit/yaml-payload/security/advisories/new) feature
+- Or contact the repository maintainer directly
+- Provide detailed information about the vulnerability
+- Allow time for the issue to be addressed before public disclosure
 
 Please do not use this issue tracker to report vulnerabilities in other projects or systems.
 
